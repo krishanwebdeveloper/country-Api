@@ -1,0 +1,117 @@
+.pic1{
+    width: 30px;
+    height: 30px;
+}
+
+body{
+    background: url(../images/718568_01\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-position-y: -350px;
+
+   /* overflow: hidden; */
+}
+.basicinfo{
+    font-size: 32px;
+    margin-left: -8px;
+    text-align: center;
+    font-weight: 600;
+}
+#container {
+    width: 600px;
+    height: 698px;
+    margin-left: 763px;
+    background-color: #ade1ebbe;
+    border: 9px solid #ffffff;
+    box-shadow: -3px 4px 17px 13px rgb(201 201 233);
+    border-radius: 9px;
+    margin: auto;
+   
+}
+.icon{
+    width: 25px;
+    height: 25px;
+}
+#flag {
+    margin-top: 3px;
+    margin-left: 35px;
+    width: 300px;
+    height: 200px;
+    /* background: url(../images/9386670_34070.jpg); */
+    background-size: cover;
+    margin-bottom: 17px;
+}
+#countryinput {
+    margin-left: 105px;
+    width: 322px;
+    height: 37px;
+    padding-left: 13px;
+    border: 3px solid rgb(28, 198, 198);
+    border-radius: 10px;
+    font-size: 18px;
+    /* margin-top: -25px; */
+    position: relative;
+    top: -20px;
+}
+#searchbutton{
+    
+    position: relative;
+    top: -14px;
+    padding: 6px 9px 3px 9px;
+    border: 3px solid #1cc6c6;
+    border-radius: 10px;
+}
+#akm, #extrainfo{
+    list-style-type: none;
+    margin-left: 70px;
+    margin-top: -10px;
+}
+li {
+    color: rgb(0 0 0);
+    font-size: 23px;
+    font-weight: 500;
+    margin-left: 34px;
+}
+#extrainfobutton {
+    margin-left: 254px;
+    border: 3px solid rgb(28, 198, 198);
+    border-radius: 6px;
+    width: 100px;
+    height: 36px;
+    font-size: 18px;
+    margin-top: -10px;
+    margin-bottom: 8px;
+}
+.dot1{
+    margin-left: 20px;
+}
+.dot2{
+    margin-left: 86px;
+}
+.dot3{
+    margin-left: 53px;
+}
+.dot4{
+    margin-left: 62px;
+}
+
+.dot5{
+    margin-left: 87px;
+}
+.dot6{
+    margin-left: 48px;
+}
+.dot7{
+    margin-left: 115px;
+}
+.dot8{
+    margin-left: 59px;
+}
+.dot9{
+    margin-left: 28px;
+}
+
+@media screen and(max-width:500px){
+    
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="container" class="country">
+
+        <p class="basicinfo">WORLD COUNTRY BASIC INFORMATION</p>
+        <input type="text" id="countryinput" class="active " placeholder="Enter a country name....">
+        <button id="searchbutton" class="active1"><img src="assets/images/png-clipart-computer-icons-search-icon-zooming-user-interface-computer-icons-removebg-preview.png" alt="" class="icon"></button>
+        <span id="countryname"></span>
+
+       
+        <ul id="akm" class="country">
+            <img src="assets/images/9386670_34070.jpg" alt="" class="country" id="flag">
+            <li >Official name    <span class="dot1">:</span> <span id="officialname"></span> </li>
+            <li >Capital<span class="dot2">:</span> <span id="capital"></span></li>
+            <li>Population<span class="dot3">:</span> <span  id="population"></span></li>
+            <li >Continent<span class="dot4">:</span><span id="continent"></span></li>
+            <li >Region<span class="dot5">:</span><span id="regions"></span></li>
+            <li >Time zones<span class="dot6">:</span><span id="time"></span></li>
+
+        </ul>
+        
+        <button id="extrainfobutton" class="country">More info</button>
+
+    
+
+
+    <div id="container2" class="country">
+        <ul id="extrainfo">
+            <li>Car <span class="dot7">: <span  id="car"></span></li>
+            <li >Subregion<span class="dot8">: <span id="subregion"></span></li>
+            <li > Start of Week<span class="dot9">: <span id="startofweek"></span></li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+    <script>
+        let container = document.getElementById("container")
+        let container2 = document.getElementById("container2")
+        let extrainfobutton = document.getElementById("extrainfobutton")
+        let searchbutton =  document.getElementById("searchbutton")
+
+
+        let countryname = document.getElementById("countryname")
+        let officialname = document.getElementById("officialname")
+        let capital = document.getElementById("capital")
+        let population = document.getElementById("population")
+        let continent = document.getElementById("continent")
+        let region = document.getElementById("regions")
+        let flag = document.getElementById("flag")
+        let  times= document.getElementById("time")
+
+        let car = document.getElementById("car")
+        let subregion = document.getElementById("subregion")
+        let startofweek = document.getElementById("startofweek")
+        let infolist = document.getElementById("info")
+        let countryinput = document.getElementById("countryinput")
+
+
+       
+
+
+    searchbutton.addEventListener('click', fetchData)
+
+    function fetchData(){
+            let countryname= countryinput.value
+
+          
+          
+
+            fetch( 'https://restcountries.com/v3.1/name/'+countryname )
+
+        .then(response=>{
+            return response.json();
+        })
+        .then(data=>{
+            console.log(data);
+          
+
+         data.map((flagmap)=>{
+
+             flag.src = flagmap.flags.png;[0].flags
+             officialname.innerHTML=flagmap.name.official;
+             capital.innerHTML =flagmap.capital;
+             times.innerHTML = flagmap.timezones[0]
+             continent.innerHTML=flagmap.continents[0];
+             region.innerHTML = flagmap.region;
+            
+             population.innerHTML =flagmap.population;
+             car.innerHTML = flagmap.cca2;
+            subregion.innerHTML =flagmap.subregion;
+             startofweek.innerHTML =flagmap.startOfWeek
+            })
+        
+       
+         
+          
+
+})
+        }
+    </script>
+
+</body>
+
+</html>
